@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión a Backend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conexión a Backend con Balanceador de Carga (Round-Robin)</h1>
+        <button id="set-url-btn">Establecer URL del Balanceador de Carga</button>
+        <p id="status-msg" class="hidden">Estado de conexión: </p>
+    </div>
+
+    <div class="car-container">
+        <h2>Agregar Carro</h2>
+        <form id="addCarForm">
+            <label for="placa">Placa:</label>
+            <input type="text" id="placa" name="placa" required>
+
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color" required>
+
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" required>
+
+            <button type="submit">Agregar Carro</button>
+        </form>
+    </div>
+
+    <div class="car-container">
+        <h2>Listar Vehículos</h2>
+        <button id="listCarsBtn">Listar Vehículos</button>
+        <ul id="carList">
+            <!-- Aquí se mostrarán los vehículos -->
+        </ul>
+    </div>
+
+    <div class="car-container">
+        <h2>Borrar Carro</h2>
+        <form id="deleteCarForm">
+            <label for="placaToDelete">Placa:</label>
+            <input type="text" id="placaToDelete" name="placaToDelete" required>
+
+            <button type="submit">Borrar Carro</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
